@@ -262,5 +262,44 @@
 }
   /* end form login */
 
+  .container-feed {
+    display: flex;
+}
 
-  /* style dos links do arquivo _links.html.erb */
+
+
+
+
+
+
+/* FEED USER */
+
+.profile {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.feed {
+    flex: 3;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+}
