@@ -1,0 +1,51 @@
+<div class="landing-page">
+  <header>
+    <div class="container">
+      <a href="#" class="logo">Fast <b>Network</b></a>
+      <ul class="links">
+        <li>Chat</li>
+        <li>Profile</li>
+        <li><%= button_to "Sign out", destroy_user_session_path, method: :delete %> </li>
+      </ul>
+    </div>
+  </header>
+</div>
+
+<div class="container-feed">
+  <div class="profile">
+    <%= image_tag "perfil.jpeg", alt: "Foto de perfil" %>
+    <h1><%= current_user.name %></h1>
+    <p>Descrição do perfil</p>
+    <!-- Outras informações do perfil aqui -->
+  </div>
+  <div class="content">
+    <div class="status-bar">
+      <div class="post-bar">
+        <textarea placeholder="What's on your mind?"></textarea>
+        <div class="post-buttons">
+          <button id="button-teste"><i class="fas fa-image"></i></button>
+          <button><i class="fas fa-image"></i> Image</button>
+          <button><i class="fas fa-image"></i> Image</button>
+        </div>
+      </div>
+    </div>
+    <div class="feed">
+      <div id="posts">
+        <% @posts.each do |post| %>
+          <%= render post %>
+          <p>
+            <%= link_to "Show this post", post %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript puro
+  document.getElementById("button-teste").addEventListener("click", function() {
+    alert("O botão 'button-teste' foi clicado!");
+    // Você pode adicionar mais lógica aqui
+  });
+</script>

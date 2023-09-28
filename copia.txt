@@ -1,4 +1,6 @@
-<div class="post">
-                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
-                <p>Legenda da postagem 1</p>
-            </div>
+<% if user_signed_in? %>
+<%= render "feed_logado" %>
+<% else %> <!-- SE NAO ESTIVER LOGADO ENTRA AQUI -->
+<%= render "home_nao_logado" %>
+  
+<% end
