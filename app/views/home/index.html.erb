@@ -1,8 +1,70 @@
 
 <% if user_signed_in? %> 
- <div> Welcome <%= current_user.email %> </div> 
+ <%# <div> Welcome <%= current_user.email %> 
+ <div class="landing-page">
+        <header>
+          <div class="container">
+            <a href="#" class="logo">Fast <b>Network</b></a>
+            <ul class="links">
+            <li>Chat</li>
+            <li>Profile</li>
+              <li><%= button_to "Sign out", destroy_user_session_path, method: :delete %> </li>
+            </ul>
+          </div>
+        </header>
+        </div>
 
-  <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+        <div class="container-feed">
+        <div class="profile">
+            <%= image_tag "perfil.jpeg", alt: "Logo da minha aplicação" %>
+
+            <h1><%= current_user.name %></h1>
+            <p>Descrição do perfil</p>
+            <!-- Outras informações do perfil aqui -->
+        </div>
+        <div class="feed">
+            <!-- Aqui você pode adicionar as postagens do feed -->
+            <div class="post">
+                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
+                <p>Legenda da postagem 1</p>
+            </div>
+           <div class="post">
+                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
+                <p>Legenda da postagem 1</p>
+            </div>
+
+            <div class="post">
+                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
+                <p>Legenda da postagem 1</p>
+            </div>
+
+            <div class="post">
+                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
+                <p>Legenda da postagem 1</p>
+            </div>
+
+            <div class="post">
+                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
+                <p>Legenda da postagem 1</p>
+            </div>
+
+            <div class="post">
+                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
+                <p>Legenda da postagem 1</p>
+            </div>
+
+            <div class="post">
+                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
+                <p>Legenda da postagem 1</p>
+            </div>
+
+            <div class="post">
+                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
+                <p>Legenda da postagem 1</p>
+            </div>
+            <!-- Adicione mais postagens conforme necessário -->
+        </div>
+    </div>
 <% else %>
       <!-- Start Landing Page -->
       <div class="landing-page">
