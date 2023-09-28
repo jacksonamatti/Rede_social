@@ -15,56 +15,40 @@
         </div>
 
         <div class="container-feed">
-        <div class="profile">
-            <%= image_tag "perfil.jpeg", alt: "Logo da minha aplicação" %>
+  <div class="profile">
+    <%= image_tag "perfil.jpeg", alt: "Foto de perfil" %>
+    <h1><%= current_user.name %></h1>
+    <p>Descrição do perfil</p>
+    <!-- Outras informações do perfil aqui -->
+  </div>
+  <div class="content">
+    <div class="status-bar">
+      <div class="post-bar">
+        <textarea placeholder="What's on your mind?"></textarea>
+        <div class="post-buttons">
+            <button><i class="fas fa-image"></i> Image</button>
+            <button><i class="fas fa-image"></i> Image</button>
+            <button><i class="fas fa-image"></i> Image</button>
+           
 
-            <h1><%= current_user.name %></h1>
-            <p>Descrição do perfil</p>
-            <!-- Outras informações do perfil aqui -->
-        </div>
-        <div class="feed">
-            <!-- Aqui você pode adicionar as postagens do feed -->
-            <div class="post">
-                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
-                <p>Legenda da postagem 1</p>
-            </div>
-           <div class="post">
-                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
-                <p>Legenda da postagem 1</p>
-            </div>
-
-            <div class="post">
-                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
-                <p>Legenda da postagem 1</p>
-            </div>
-
-            <div class="post">
-                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
-                <p>Legenda da postagem 1</p>
-            </div>
-
-            <div class="post">
-                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
-                <p>Legenda da postagem 1</p>
-            </div>
-
-            <div class="post">
-                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
-                <p>Legenda da postagem 1</p>
-            </div>
-
-            <div class="post">
-                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
-                <p>Legenda da postagem 1</p>
-            </div>
-
-            <div class="post">
-                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
-                <p>Legenda da postagem 1</p>
-            </div>
-            <!-- Adicione mais postagens conforme necessário -->
-        </div>
     </div>
+    </div>
+    </div>
+    <div class="feed">
+      <!-- Conteúdo do feed aqui -->
+      <div class="post">
+                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
+                <p>Legenda da postagem 1</p>
+            </div>
+
+            <div class="post">
+                <img src="https://w0.peakpx.com/wallpaper/805/635/HD-wallpaper-social-media-logo-design.jpg" alt="Postagem 1">
+                <p>Legenda da postagem 1</p>
+            </div>
+    </div>
+  </div>
+</div>
+
 <% else %>
       <!-- Start Landing Page -->
       <div class="landing-page">
